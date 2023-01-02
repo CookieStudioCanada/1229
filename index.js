@@ -1,4 +1,4 @@
-
+// Tabs
 function openPage(pageName, elmnt, color) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent, tablinks;
@@ -23,7 +23,7 @@ function openPage(pageName, elmnt, color) {
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
   
-  
+// Form - Choix
 const form = document.getElementById('form');
   
 form.addEventListener('submit', (event) => {
@@ -39,7 +39,8 @@ form.addEventListener('submit', (event) => {
   
       console.log(results.length, results);
     });
-  
+
+// Creation de la table
 const table = document.getElementById('results');
   
 form.addEventListener('submit', (event) => {
