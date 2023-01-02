@@ -1,12 +1,7 @@
-.header  {
-    font-size: 34px;
-}
-
 .button  {
   background-color: #777;
 }
 
-/* Style tab links */
 .tablink {
   background-color: lightgrey;
   color: black;
@@ -15,9 +10,9 @@
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  margin-right: 10px;
   font-size: 17px;
-  width: 23%;
+  margin-right: 10px; /* Random but work */
+  width: 23%; /* Random but work */
 }
 
 .body {
@@ -28,11 +23,7 @@
   background-color: #777;
 }
 
-.tablink:clicked {
-  background-color: red;
-}
-
-form {
+form { /* Mieux dans le body...? */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,6 +74,7 @@ h2 {
     color: white;
   }
 
+  /* Table... pas utile pour le moment... */
   table {
     width: 50%;
     margin: 20px auto;
