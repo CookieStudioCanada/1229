@@ -1,124 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>NHL pool</title>
-
-<style>
-
-<style>
-
-.header  {
-    font-size: 34px;
-}
-
-.button  {
-  background-color: #777;
-}
-
-/* Style tab links */
-.tablink {
-  background-color: lightgrey;
-  color: black;
-  float: left;
-  border: 1px solid black;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  margin-right: 10px;
-  font-size: 17px;
-  width: 23%;
-}
-
-.body {
-    align-items: center;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-.tablink:clicked {
-  background-color: red;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-.series {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 20px;
-  width: 75%;
-  background: lightgrey;
-}
-
-.block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-}
-
-  input[type="radio"] {
-    margin-right: 5px;
-  }
-
-  input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  input[type="submit"]:hover {
-	background: black;
-  }
-
-  table {
-    width: 50%;
-    margin: 20px auto;
-    border-collapse: collapse;
-  }
-
-  th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-  }
-
-  th {
-    background-color: #eee;
-  }
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pool Test</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
 
-<h1>MEGA POOL</h1>
+<h1>POOL TEST</h1>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tablink" onclick="openPage('Home', this, 'grey')"id="defaultOpen">Choix</button>
+<button class="tablink" onclick="openPage('News', this, 'grey')">Classement</button>
+<button class="tablink" onclick="openPage('Contact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'grey')">About</button>
 
 <br>
 <br>
@@ -230,7 +127,7 @@ h2 {
 
 <div id="News" class="tabcontent">
   
-<h3>Table</h3>
+<h3>Classement</h3>
 
 <table id="results">
   <tr>
@@ -239,7 +136,6 @@ h2 {
     <th>Number of games</th>
   </tr>
 </table>
-
 
 </div>
 
@@ -253,81 +149,7 @@ h2 {
   <p>Who we are and what we do.</p>
 </div>
 
-<script>
-
-function openPage(pageName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-
-  const form = document.getElementById('form');
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const results = [];
-
-    for (let i = 1; i <= 4; i++) {
-      const winner = form[`winner${i}`].value;
-      const game = form[`games${i}`].value;
-      results.push(`${winner} in ${game}`);
-    }
-
-    console.log(results.length, results);
-  });
-
-  const table = document.getElementById('results');
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    // clear the table
-    while (table.rows.length > 1) {
-      table.deleteRow(1);
-    }
-
-    const series = ['Montreal vs Atlanta', 'Boston vs Calgary', 'Edmonton vs Vancouver', 'Tampa Bay vs Florida'];
-
-    for (let i = 1; i <= 4; i++) {
-      const winner = form[`winner${i}`].value;
-      const game = form[`games${i}`].value;
-
-      // create a new row
-      const row = table.insertRow();
-
-      // insert cells
-      const seriesCell = row.insertCell();
-      const winnerCell = row.insertCell();
-      const gamesCell = row.insertCell();
-
-      // populate cells
-      seriesCell.innerHTML = series[i - 1];
-      winnerCell.innerHTML = winner;
-      gamesCell.innerHTML = game;
-    }
-  });
-
-</script>
+<script src="index.js"></script>
 
 </body>
 

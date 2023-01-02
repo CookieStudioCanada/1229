@@ -1,0 +1,100 @@
+.header  {
+    font-size: 34px;
+}
+
+.button  {
+  background-color: #777;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: lightgrey;
+  color: black;
+  float: left;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin-right: 10px;
+  font-size: 17px;
+  width: 23%;
+}
+
+.body {
+    align-items: center;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tablink:clicked {
+  background-color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.series {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  width: 75%;
+  background: lightgrey;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+	background: black;
+    color: white;
+  }
+
+  table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #eee;
+  }
